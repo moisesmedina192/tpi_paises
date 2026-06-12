@@ -2,26 +2,37 @@
 
 ## Trabajo Práctico Integrador - Programación 1
 
-### Integrantes
+### Alumno
 
-* Nombre Apellido
-* Nombre Apellido
-
----
-
-## Descripción del Proyecto
-
-Este proyecto consiste en una aplicación desarrollada en Python para la gestión de información de países mediante el uso de listas, diccionarios, funciones y archivos CSV.
-
-El sistema permite cargar, consultar, actualizar y analizar datos de distintos países, proporcionando herramientas de búsqueda, filtrado, ordenamiento y generación de estadísticas.
-
-El objetivo principal es aplicar los conceptos estudiados en la materia Programación 1, desarrollando una solución modular, robusta y fácil de utilizar.
+Moises Alejandro Medina Rivero
 
 ---
 
-## Estructura de Datos
+# Descripción General
 
-Cada país se almacena como un diccionario con la siguiente estructura:
+Este proyecto consiste en el desarrollo de una aplicación de consola en Python para la gestión de información de países mediante el uso de listas, diccionarios, funciones y archivos CSV.
+
+La aplicación permite almacenar, consultar y analizar información geográfica y demográfica de distintos países, implementando funcionalidades de búsqueda, filtrado, ordenamiento y generación de estadísticas.
+
+El objetivo principal es aplicar los conceptos fundamentales estudiados durante la materia Programación 1, desarrollando una solución modular, organizada y robusta.
+
+---
+
+# Objetivos del Proyecto
+
+* Aplicar estructuras de datos como listas y diccionarios.
+* Implementar funciones para modularizar el código.
+* Utilizar archivos CSV para persistencia de datos.
+* Realizar búsquedas y filtrados sobre conjuntos de información.
+* Implementar ordenamientos según distintos criterios.
+* Generar estadísticas básicas a partir de los datos almacenados.
+* Aplicar validaciones y manejo de errores.
+
+---
+
+# Estructura de Datos
+
+Cada país se representa mediante un diccionario con la siguiente estructura:
 
 ```python
 {
@@ -32,33 +43,33 @@ Cada país se almacena como un diccionario con la siguiente estructura:
 }
 ```
 
-Todos los países se almacenan dentro de una lista.
+Todos los países se almacenan dentro de una lista principal que permite recorrer, filtrar y ordenar la información de manera eficiente.
 
 ---
 
-## Funcionalidades
+# Funcionalidades Implementadas
 
-### Gestión de Países
+## Gestión de Países
 
-* Mostrar todos los países.
+* Mostrar todos los países almacenados.
 * Agregar nuevos países.
-* Actualizar población y superficie.
+* Actualizar población y superficie de un país.
 * Buscar países por nombre.
 
-### Filtros
+## Filtros
 
 * Filtrar por continente.
 * Filtrar por rango de población.
 * Filtrar por rango de superficie.
 
-### Ordenamientos
+## Ordenamientos
 
 * Ordenar por nombre.
 * Ordenar por población.
 * Ordenar por superficie.
-* Orden ascendente y descendente.
+* Mostrar resultados en orden ascendente o descendente.
 
-### Estadísticas
+## Estadísticas
 
 * País con mayor población.
 * País con menor población.
@@ -68,80 +79,61 @@ Todos los países se almacenan dentro de una lista.
 
 ---
 
-## Tecnologías Utilizadas
+# Tecnologías Utilizadas
 
 * Python 3
-* CSV
+* CSV (Comma Separated Values)
 * Visual Studio Code
+* GitHub
 
 ---
 
-## Requisitos
+# Archivo de Datos
 
-Tener instalado:
-
-* Python 3.10 o superior
-
-Verificar instalación:
-
-```bash
-python --version
-```
-
----
-
-## Ejecución
-
-Ubicarse dentro de la carpeta del proyecto y ejecutar:
-
-```bash
-python main.py
-```
-
-o
-
-```bash
-python3 main.py
-```
-
----
-
-## Archivo CSV
-
-El sistema utiliza un archivo llamado:
+La aplicación trabaja con un archivo llamado:
 
 ```text
 paises.csv
 ```
 
-El mismo contiene la información base de los países.
-
-Ejemplo:
-
-```csv
-nombre,poblacion,superficie,continente
-Argentina,45376763,2780400,America
-Brasil,213993437,8515767,America
-España,47450795,505990,Europa
-```
+Este archivo almacena los datos de los países y permite conservar la información entre ejecuciones del programa.
 
 ---
 
-## Validaciones Implementadas
+# Validaciones Implementadas
 
-* No permite nombres vacíos.
-* No permite países duplicados.
-* Controla errores de lectura del CSV.
-* Controla errores de formato.
-* Maneja búsquedas sin resultados.
-* Valida valores numéricos.
-* Permite búsquedas ignorando mayúsculas, minúsculas y acentos.
+La aplicación incorpora diferentes mecanismos de validación para evitar errores durante su ejecución:
+
+* Control de archivos CSV inexistentes.
+* Validación de datos numéricos.
+* Control de nombres vacíos.
+* Prevención de países duplicados.
+* Búsquedas sin distinción entre mayúsculas y minúsculas.
+* Búsquedas compatibles con nombres escritos con o sin acentos.
+* Manejo de excepciones mediante estructuras try/except.
 
 ---
 
-## Ejemplos de Uso
+# Conceptos Aplicados
 
-### Buscar un país
+Durante el desarrollo del proyecto se utilizaron los siguientes conceptos de Programación 1:
+
+* Listas
+* Diccionarios
+* Funciones
+* Estructuras condicionales
+* Estructuras repetitivas
+* Archivos CSV
+* Ordenamientos
+* Estadísticas básicas
+* Modularización
+* Manejo de errores
+
+---
+
+# Ejemplos de Uso
+
+### Búsqueda de País
 
 Entrada:
 
@@ -149,16 +141,16 @@ Entrada:
 espana
 ```
 
-Salida:
+Resultado:
 
 ```text
 España
 Población: 47450795
-Superficie: 505990
+Superficie: 505990 km²
 Continente: Europa
 ```
 
-### Filtrar por continente
+### Filtrado por Continente
 
 Entrada:
 
@@ -166,50 +158,20 @@ Entrada:
 america
 ```
 
-Salida:
+Resultado:
 
 ```text
 Argentina
 Brasil
 Chile
-Peru
+Perú
+Uruguay
+Paraguay
 ...
 ```
 
 ---
 
-## Aprendizajes Aplicados
+# Conclusión
 
-Durante el desarrollo del proyecto se aplicaron los siguientes conceptos:
-
-* Listas
-* Diccionarios
-* Funciones
-* Condicionales
-* Ciclos repetitivos
-* Archivos CSV
-* Ordenamientos
-* Estadísticas básicas
-* Manejo de errores
-
----
-
-## Repositorio
-
-Agregar aquí el enlace al repositorio GitHub:
-
-https://github.com/USUARIO/REPOSITORIO
-
----
-
-## Video Demostración
-
-Agregar aquí el enlace al video:
-
-https://LINK-DEL-VIDEO
-
----
-
-## Conclusión
-
-Este proyecto permitió integrar los principales contenidos desarrollados en la materia Programación 1, aplicando estructuras de datos, modularización, lectura de archivos CSV y análisis estadístico. Además, se fortalecieron las buenas prácticas de programación mediante el desarrollo de un sistema robusto, organizado y fácil de mantener.
+Este proyecto permitió integrar los principales contenidos desarrollados en la materia Programación 1 mediante la construcción de una aplicación funcional y organizada. Se aplicaron estructuras de datos, funciones, archivos CSV, técnicas de búsqueda, filtrado, ordenamiento y generación de estadísticas, fortaleciendo tanto la lógica de programación como las buenas prácticas de desarrollo.
